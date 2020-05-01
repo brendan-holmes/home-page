@@ -8,15 +8,12 @@ const ComponentCard = (props) =>
         <>
             <style type="text/css">
                 {`
-                .card-custom {
-                }
-
                 .card:hover {
-                    transform: scale(0.98)
+                    /* transform: scale(0.98); */
                     }
                 `}
             </style>
-            <Card border='light rounded-lg' bg='light' text='dark' >
+            <Card className='mb-4' border='light rounded-lg' bg='light' text='dark' >
                 <Card.Img className="img-fluid ml-auto mr-auto rounded-top card-custom" variant='top' data-src="holder.js/350x250"/>
                 <Card.Body>
                     <Card.Title>{props.title}</Card.Title>

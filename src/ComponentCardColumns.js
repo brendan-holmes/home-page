@@ -1,50 +1,59 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CardDeck from 'react-bootstrap/CardDeck';
 import ComponentCard from './ComponentCard'
-//import axios from 'axios';
+import axios from 'axios';
 
-const projects = [];
-
-const cards = [];
-
-// GET https://api.github.com/users/brendan-holmes
-// GET https://api.github.com/users/brendan-holmes/repos
-
-const userUrl = 'https://api.github.com/users/brendan-holmes';
+//const userUrl = 'https://api.github.com/users/brendan-holmes';
 const reposUrl = 'https://api.github.com/users/brendan-holmes/repos';
 
-//const CardList = async (props) => {
-//    const resp = await axios.get(reposUrl);
-//
-//    return (
-//        <>
-//            {props.profiles.map(profile => 
-//            
-//            <ComponentCard 
-//            title={resp.data.}
-//            subtitle="Mongo, ExpressJS, React, NodeJS"
-//            text="Create, read, update and delete movie items from this simple data management app."
-//            link="https://mysterious-eyrie-84274.herokuapp.com/"
-//            github="https://github.com/brendan-holmes/db-app"/>)}
-//	    </>
-//    )
-//};
+const getRepoData = () => {
+    return axios.get(reposUrl, {})
+        .then((response) => {
+            console.log(`Retreived ${response.data.length} repos from Github.`)
+            let arr = []
+            Object.keys(response.data)
+            .map((key, index) => arr.push(response.data[key]));
+            return arr
+    })
+    .catch(error => {console.log(`Failed to get Github repository data. ${error}`)})
+}
 
-//const CardsAndLineBreaks = () => (
-//    i = 0
-//    array.forEach(element => {
-//        i++
-//        if (i%2) {
-//            // insert line break
-//        }
-//        else if (i%3) {
-//            // insert line break
-//        }
-//    });
-//);
+// map the data array to cards
+
+const CardList = (props) => {
+
+    return (
+        <>
+            {props.repoData.map((repo,i) => {
+                let item = []
+                
+                item.push(
+                    <ComponentCard key={i} 
+                        title={repo.name} 
+                        subtitle={repo.language}
+                        text={repo.description}
+                        link={repo.homepage}
+                        github={repo.html_url}/>
+                )
+                if(((i+1) % 2 === 0) && (i !== 0)){
+                    item.push(<div className="w-100 d-none d-sm-block d-md-none" />);
+                }
+                if(((i+1) % 3 === 0) && (i !== 0)){
+                    item.push(<div className="w-100 d-none d-md-block d-l-none" />);
+                }
+                return item
+            })}
+        </>
+)};
 
 const ComponentCardColumns = () => 
-    (
+{
+    const [repoData, setRepoData] = useState([]);
+    getRepoData().then(result => {
+        setRepoData(result);
+    })
+
+    return (
         <>
             <style type="text/css">
                 {`
@@ -57,7 +66,16 @@ const ComponentCardColumns = () =>
                 `}
             </style>
             <CardDeck>
-                <ComponentCard 
+                <CardList repoData={repoData}/>
+            </CardDeck>
+        </>
+    )
+}
+
+export default ComponentCardColumns
+
+/*
+<ComponentCard 
                     title="Movies Database" 
                     subtitle="Mongo, ExpressJS, React, NodeJS"
                     text="Create, read, update and delete movie items from this simple data management app."
@@ -69,21 +87,21 @@ const ComponentCardColumns = () =>
                     text="Minimal shopping list for shoppers on the go. Create and delete items."
                     link="#"
                     github="#"/>  
-                <div class="w-100 d-none d-sm-block d-md-none" />
+                <div className="w-100 d-none d-sm-block d-md-none" />
                 <ComponentCard 
                     title="Florist's Portfolio"  
                     subtitle="Bootstrap, React"
                     text="A clean and responsive website that showcases the work of a florist."
                     link="#"
                     github="#"/> 
-                <div class="w-100 d-none d-md-block d-l-none" /> 
+                <div className="w-100 d-none d-md-block d-l-none" /> 
                 <ComponentCard 
                     title="Web App 1"  
                     subtitle="languages"
                     text="Description"
                     link="#"
                     github="#"/>
-                <div class="w-100 d-none d-sm-block d-md-none" />
+                <div className="w-100 d-none d-sm-block d-md-none" />
                 <ComponentCard 
                     title="Web App 2"  
                     subtitle="languages"
@@ -96,10 +114,4 @@ const ComponentCardColumns = () =>
                     text="Description"
                     link="#"
                     github="#"/>  
-                <div class="w-100 d-none d-md-block d-l-none" />
-            </CardDeck>
-        </>
-    )
-
-
-export default ComponentCardColumns
+                <div className="w-100 d-none d-md-block d-l-none" />*/
