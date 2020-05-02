@@ -18,6 +18,9 @@ const ComponentNavBar = () =>
                 .navbar {
                     height: 14vh;
                     font-size: 1.5em;
+                    max-width: 1200px;
+                    margin-left: auto;
+                    margin-right: auto;
                 }
                 .navbar-light .navbar-brand {
                     font-size: 1.5em;
