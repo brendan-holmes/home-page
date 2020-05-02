@@ -6,13 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // extended bootstrap components
 import ComponentNavBar from './ComponentNavBar';
-import ComponentCardColumns from './ComponentCardColumns';
+import ComponentCardArea from './ComponentCardArea';
 
 function App() {
   return (
     <>
       <ComponentNavBar/>
-      <ComponentCardColumns/>
+      <ComponentCardArea/>
     </>
   )
 }
