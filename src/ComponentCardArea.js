@@ -3,7 +3,6 @@ import CardDeck from 'react-bootstrap/CardDeck';
 import ComponentCard from './ComponentCard'
 import axios from 'axios';
 
-//const userUrl = 'https://api.github.com/users/brendan-holmes';
 const reposUrl = 'https://api.github.com/users/brendan-holmes/repos';
 
 const getRepoData = async () => {
@@ -55,7 +54,6 @@ class ComponentCardArea extends React.Component {
 
     componentDidMount(){
         getRepoData().then(repoData => {
-            console.log('test test 2')
             this.setState({
                 githubRepoData: repoData
             })
@@ -85,20 +83,16 @@ class ComponentCardArea extends React.Component {
 const getPlaceHolderRepoData = () => {
     let arr = [];
 
-    arr.push({
-        "name":"",
-        "language":"",
-        "description":"",
-        "homepage":"",
-        "github":""}
-        ); 
-    arr.push({
-        "name":"",
-        "language":"",
-        "description":"",
-        "homepage":"",
-        "github":""}
-        );
+    for (let i = 0; i < 6; i++) {
+        arr.push({
+            "name":"",
+            "language":"",
+            "description":"",
+            "homepage":"",
+            "github":""}
+            ); 
+    }
+
     return arr;
 }
 
