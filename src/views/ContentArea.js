@@ -3,7 +3,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import About from './About';
 import Home from './Home';
-import { home, projects, about, contact } from './pages';
+import { home, projects, about, contact } from '../pages';
 
 function ContentArea(props) {
   const getPageArea = (page) => {

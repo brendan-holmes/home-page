@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './styles/App.css';
 
 // extended bootstrap components
-import ComponentNavBar from './ComponentNavBar';
-import ContentArea from './ContentArea';
+import NavBarExt from './components/NavBarExt';
+import ContentArea from './views/ContentArea';
 
 function App() {
   const [page, setPage] = useState('default');
   return (
     <>
-      <ComponentNavBar setPage={setPage}/>
+      <NavBarExt setPage={setPage}/>
       <ContentArea page={page}/>
     </>
   )

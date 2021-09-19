@@ -1,9 +1,9 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { home, projects, about, contact } from './pages';
+import { home, projects, about, contact } from '../pages';
 
-const ComponentNavBar = (props) => 
+const NavBarExt = (props) => 
     (
         <>
             <style type="text/css">
@@ -34,4 +34,4 @@ const ComponentNavBar = (props) =>
         </>
     )
 
-export default ComponentNavBar;
+export default NavBarExt;
