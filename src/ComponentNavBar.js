@@ -10,7 +10,6 @@ const ComponentNavBar = (props) =>
             <style type="text/css">
                 {`
                 .navbar {
-                    height: 14vh;
                     font-size: 1.5em;
                     max-width: 1200px;
                     margin-left: auto;
