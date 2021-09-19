@@ -1,10 +1,10 @@
 # Home page for Brendan Holmes
 
 ## Never heard of him
-Brendan is a software engineer in Melbourne, Australia. He works at Xero on their tax product for accountants and book keepers.
+Brendan is a software engineer in Melbourne, Australia. He works at Xero on their [tax product for accountants and book keepers](https://www.xero.com/au/xero-tax/).
 
 ## What is this?
-A web page to show his projects to the wider world and anything else he decides to post. It was built using create-react-app.
+A web page to show his projects to the wider world and anything else he decides to post. It was built using [create-react-app](https://create-react-app.dev/).
 
 ## Getting started
 From the terminal:
@@ -14,4 +14,4 @@ From the terminal:
 - Run on local: `npm start`
 
 ## Hosted version
-brendanholmes.net
+[brendanholmes.net](https://brendanholmes.net)
