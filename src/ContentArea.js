@@ -1,9 +1,9 @@
 import React from 'react';
 import Projects from './Projects';
-import Socials from './Socials';
+import Contact from './Contact';
 import About from './About';
 import Home from './Home';
-import { home, projects, about, socials } from './pages';
+import { home, projects, about, contact } from './pages';
 
 function ContentArea(props) {
   const getPageArea = (page) => {
@@ -14,8 +14,8 @@ function ContentArea(props) {
             return (<Projects />);
         case(about):
             return (<About />);
-        case(socials):
-            return (<Socials />);
+        case(contact):
+            return (<Contact />);
         default:
             return (<Home />);
     }};

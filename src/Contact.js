@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
-const Socials = () => {
+const Contact = () => {
     return (
         <>
             <div>
@@ -19,4 +19,4 @@ const Socials = () => {
     );
 }
 
-export default Socials;
+export default Contact;

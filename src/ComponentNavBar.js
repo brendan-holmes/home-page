@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { home, projects, about, socials } from './pages';
+import { home, projects, about, contact } from './pages';
 //import NavDropdown from 'react-bootstrap/Dropdown'
 
 const ComponentNavBar = (props) => 
@@ -27,7 +27,7 @@ const ComponentNavBar = (props) =>
                     <Nav className="mr-1 ml-auto">
                         <Nav.Link href="javascript:;" onClick={() => props.setPage(projects)}>Projects</Nav.Link>
                         <Nav.Link href="javascript:;" onClick={() => props.setPage(about)}>About</Nav.Link>
-                        <Nav.Link href="javascript:;" onClick={() => props.setPage(socials)}>Socials</Nav.Link>                 
+                        <Nav.Link href="javascript:;" onClick={() => props.setPage(contact)}>Contact</Nav.Link>                 
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
