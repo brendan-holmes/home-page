@@ -1,18 +1,18 @@
-import React from 'react';
-import 'holderjs';
+import React, { useState } from 'react';
 
-// Import Bootstrap css
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 // extended bootstrap components
 import ComponentNavBar from './ComponentNavBar';
-import ComponentCardArea from './ComponentCardArea';
+import ContentArea from './ContentArea';
 
 function App() {
+  const [page, setPage] = useState('default');
   return (
     <>
-      <ComponentNavBar/>
-      <ComponentCardArea/>
+      <ComponentNavBar setPage={setPage}/>
+      <ContentArea page={page}/>
     </>
   )
 }

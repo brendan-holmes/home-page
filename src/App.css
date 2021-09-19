@@ -1,0 +1,11 @@
+.margin-right {
+    margin-right: 10px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}

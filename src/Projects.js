@@ -34,11 +34,9 @@ const CardList = (props) => {
                     github={repo.html_url}/>
             )
             if(((i+1) % 2 === 0) && (i !== 0)){
-                console.log(i+1, ' : ', 'small line break')
                 item.push(<div key={i+1000} className="w-100 d-none d-sm-block d-md-none" />);
             }
             if(((i+1) % 3 === 0) && (i !== 0)){
-                console.log(i+1, ' : ', 'medium line break')
                 item.push(<div key={i+2000} className="w-100 d-none d-md-block d-l-none" />);
             }
             return item
@@ -63,18 +61,8 @@ class ComponentCardArea extends React.Component {
     }
 
     render() {
-
         return (
             <>
-                <style type="text/css">
-                    {`
-                    .card-deck {
-                        margin-left: auto;
-                        margin-right: auto;
-                        max-width: 1200px;
-                    }
-                    `}
-                </style>
                 <CardDeck>
                     <CardList repoData={this.state.githubRepoData} /> 
                 </CardDeck>
