@@ -26,8 +26,8 @@ function ContentArea(props) {
                 {`
                 .content-area {
                     margin-top: 5%;
-                    margin-left: 10%;
-                    margin-right: 10%;
+                    margin-left: 5%;
+                    margin-right: 5%;
                 }
                 `}
         </style>

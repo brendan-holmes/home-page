@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { home, projects, about, contact } from './pages';
-//import NavDropdown from 'react-bootstrap/Dropdown'
 
 const ComponentNavBar = (props) => 
     (
@@ -12,8 +11,9 @@ const ComponentNavBar = (props) =>
                 .navbar {
                     font-size: 1.5em;
                     max-width: 1200px;
-                    margin-left: auto;
-                    margin-right: auto;
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    padding: 0;
                 }
                 .navbar-light .navbar-brand {
                     font-size: 1.5em;
