@@ -1,0 +1,11 @@
+a {
+    color: black;
+  }
+  
+  a:hover {
+    color: gray;
+  }
+
+  .marginRight {
+    margin-right: 10px;
+  }

@@ -11,9 +11,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": ">=0.21.2",
-    "bootstrap": "^4.6.0",
     "react": "^16.14.0",
-    "react-bootstrap": "^1.6.3",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.1"
   },
@@ -38,7 +36,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "holderjs": "^2.9.9"
-  }
+  "devDependencies": {}
 }

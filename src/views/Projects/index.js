@@ -1,7 +1,7 @@
 import React from 'react';
-import CardExt from '../components/CardExt';
 import axios from 'axios';
-import Grid from '../components/Grid';
+import Card from '../../components/Card';
+import Grid from '../../components/Grid';
 
 const reposUrl = 'https://api.github.com/users/brendan-holmes/repos';
 
@@ -50,7 +50,7 @@ class Projects extends React.Component {
 
         const cards = this.state.githubRepoData.map((repo,i) => {
             return (
-                <CardExt key={i} 
+                <Card key={i} 
                     title={repo.name} 
                     subtitle={repo.language}
                     text={repo.description}

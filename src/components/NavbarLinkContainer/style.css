@@ -1,0 +1,15 @@
+.navbarItemContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .navbarItemContainer {
+        flex-direction: row;
+        margin-left: auto;
+        margin-right: 0;
+        align-items: flex-end;
+    }
+}
