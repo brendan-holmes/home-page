@@ -15,3 +15,6 @@ From the terminal:
 
 ## Hosted version
 [brendanholmes.net](https://brendanholmes.net)
+
+## Todo
+- Optimise Tailwind CSS for production build
