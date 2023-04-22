@@ -1,17 +1,9 @@
 import React from 'react';
-import './style.css';
+import Card from './Card';
 
 const Grid = (props) => {
-    const items = props.items;
-    
     return (
-        <div className="grid">
-            {items.map(item => {
-                return (
-                    <div key={item.key}>{item}</div>
-                );
-            })}
-        </div>
+        <div className='grid grid-cols-4 gap-8'>{props.children}</div>
     );
 };
     

@@ -1,9 +1,8 @@
 import React from 'react';
-import './style.css';
 
 const Navbar = (props) => {
     return (
-        <div className="navbar">{props.children}</div>
+        <div className='bg-yellow-300 text-2xl text-purple-700 p-5 flex justify-center items-center'>{props.children}</div>
     )};
 
 export default Navbar;

@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Card from '../../components/Card';
+import Card from '../../components/Grid/Card';
 import Grid from '../../components/Grid';
 
 const reposUrl = 'https://api.github.com/users/brendan-holmes/repos';
@@ -61,8 +61,7 @@ class Projects extends React.Component {
         });
 
         return (
-            
-            <Grid items={cards} />
+            <Grid>{cards}</Grid>
     )};
 }
 
