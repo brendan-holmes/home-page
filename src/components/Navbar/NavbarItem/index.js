@@ -1,8 +1,16 @@
 import React from 'react';
+import cn from 'classnames';
 
 const NavbarItem = (props) => {
     return (
-        <button className='p-5 m-5 bg-pink-300 hover:bg-pink-400 rounded-lg' onClick={props.onClickHandler}>{props.children}</button>
+        <button className={cn(
+            'p-2',
+            'm-2', 
+            'hover:bg-pink-400', 
+            'rounded-md',
+            'text-xl', 
+            'text-blue-100', 
+            )} onClick={props.onClickHandler}>{props.children}</button>
     )
 }
 

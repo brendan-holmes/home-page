@@ -61,7 +61,10 @@ class Projects extends React.Component {
         });
 
         return (
+        <>
+            <p className='my-5'>This is a list of my projects on GitHub</p>
             <Grid>{cards}</Grid>
+        </>
     )};
 }
 
